@@ -28,7 +28,7 @@ else
   source $HOME/.config/nvim/plug-config/nerd-commenter.vim
   source $HOME/.config/nvim/plug-config/rainbow.vim
   source $HOME/.config/nvim/plug-config/quickscope.vim
-  source $HOME/.config/nvim/plug-config/vim-wiki.vim
+  source $HOME/.config/nvim/plug-config/vim-clap.vim
   source $HOME/.config/nvim/plug-config/sneak.vim
   source $HOME/.config/nvim/plug-config/coc.vim
   source $HOME/.config/nvim/plug-config/goyo.vim
@@ -39,7 +39,9 @@ else
   source $HOME/.config/nvim/plug-config/floaterm.vim
   source $HOME/.config/nvim/plug-config/vista.vim
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua
+  " source $HOME/.config/nvim/plug-config/vim-wiki.vim
   " source $HOME/.config/nvim/plug-config/easymotion.vim
+  " source $HOME/.config/nvim/plug-config/codi.vim
 endif
 
 " Experimental
@@ -47,3 +49,6 @@ endif
 " Codi
 let g:codi#rightalign=0
 
+" disable python2 and set full path to python3
+let g:loaded_python_provider=0
+let g:python3_host_prog="/usr/bin/python3"

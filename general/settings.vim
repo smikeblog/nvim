@@ -49,4 +49,19 @@ if !exists('g:vscode')
   cmap w!! w !sudo tee %
 endif
 
+let vim_better_default_enable_folding=1
+if get(g:, 'vim_better_default_enable_folding', 1)
+  set foldenable
+"  set foldmarker={,}
+  set foldlevel=0
+  set foldmethod=marker
+  " set foldcolumn=3
+  set foldlevelstart=99
+endif
 
+    " Disable python2 and define python3 path
+let g:python3_host_prog = '/usr/bin/python3'
+" let g:python_host_prog = '/usr/bin/python2'
+
+    " disable Python 2 support:
+let g:loaded_python2_provider = 0

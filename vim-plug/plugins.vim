@@ -52,13 +52,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'NLKNguyen/papercolor-theme'
     " Plug 'tomasiser/vim-code-dark'
     " Intellisense
+    " Golang
+    Plug 'fatih/vim-go'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Status Line
     Plug 'vim-airline/vim-airline'
     " Plug 'vim-airline/vim-airline-themes'
     " Ranger
-    " Plug 'francoiscabrol/ranger.vim'
-    " Plug 'rbgrouleff/bclose.vim'
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -81,6 +81,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/goyo.vim'
     " Making stuff
     Plug 'neomake/neomake'
+    " The bang version will try to download the prebuilt binary if cargo does not exist.
+    Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
     " Snippets TODO fix TAB hijack
     " Plug 'SirVer/ultisnips'
     " Better Comments
@@ -88,8 +90,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Echo doc
     " Plug 'Shougo/echodoc.vim'
     " Interactive code
-    Plug 'metakirby5/codi.vim'
-    Plug 'https://github.com/vimwiki/vimwiki.git'
+    " Plug 'metakirby5/codi.vim'
+    " Plug 'https://github.com/vimwiki/vimwiki.git'
+    " Build the extra binary if cargo exists on your system.
+    Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
   endif
 
 
