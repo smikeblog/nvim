@@ -54,6 +54,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Intellisense
     " Golang
     Plug 'fatih/vim-go'
+    "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Status Line
     Plug 'vim-airline/vim-airline'
@@ -93,7 +94,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'metakirby5/codi.vim'
     " Plug 'https://github.com/vimwiki/vimwiki.git'
     " Build the extra binary if cargo exists on your system.
-    Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary' }
+    Plug 'wsdjeg/vim-fetch'
   endif
 
 

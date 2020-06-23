@@ -47,7 +47,7 @@ endif
 " Experimental
 
 " Codi
-let g:codi#rightalign=0
+" let g:codi#rightalign=0
 
 " disable python2 and set full path to python3
 let g:loaded_python_provider=0
