@@ -36,6 +36,14 @@ else
   " SHIFT-TAB will go back
   nnoremap <silent> <S-TAB> :bprevious<CR>
 
+  " Move selected line / block of text in visual mode
+  " shift + k to move up
+  " shift + j to move down
+  nnoremap <leader>k :m-2<CR>==
+  nnoremap <leader>j :m+<CR>==
+  xnoremap <leader>k :m-2<CR>gv=gv
+  xnoremap <leader>j :move'>+<CR>gv=gv
+
   " Alternate way to save
   nnoremap <silent> <C-s> :w<CR>
   " Alternate way to quit
