@@ -6,7 +6,7 @@ let g:airline#extensions#tabline#right_sep = ''
 let g:airline#extensions#tabline#right_alt_sep = ''
 let airline#extensions#tabline#show_splits = 0
 let airline#extensions#tabline#tabs_label = ''
-le
+" le
 
 " Disable tabline close button
 let g:airline#extensions#tabline#show_close_button = 0
@@ -41,6 +41,6 @@ set noshowmode
 
 " Sections
 " let g:airline_section_c = ''
-let g:airline_section_a = "Mach 2"
+" let g:airline_section_a = "Mach 2"
 let g:airline_section_y = ''
 let g:webdevicons_enable_airline_tabline = 1

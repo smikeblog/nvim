@@ -94,6 +94,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'metakirby5/codi.vim'
     " Plug 'https://github.com/vimwiki/vimwiki.git'
     " Build the extra binary if cargo exists on your system.
+    Plug 'honza/vim-snippets'
     Plug 'wsdjeg/vim-fetch'
   endif
 
