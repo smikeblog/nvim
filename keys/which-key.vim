@@ -25,7 +25,8 @@ autocmd  FileType which_key set laststatus=0 noshowmode noruler
 
 
 " Single mappings
-let g:which_key_map['/'] = [ ':Commentary'  , 'comment' ]
+let g:which_key_map['\'] = [ ':let @/ = ""'               , 'clear highlight' ]
+let g:which_key_map['/'] = [ ':Commentary'                , 'comment' ]
 let g:which_key_map['.'] = [ ':e $MYVIMRC'                , 'open init' ]
 let g:which_key_map[';'] = [ ':Commands'                  , 'commands' ]
 let g:which_key_map['='] = [ '<C-W>='                     , 'balance windows' ]
@@ -42,19 +43,24 @@ let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
 let g:which_key_map['W'] = [ 'w'                          , 'write' ]
 let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
 let g:which_key_map['C'] = [ 'Clap'                       , 'clap' ]
+let g:which_key_map['j'] = [ ':m+<CR>=='                  , 'move lines Down' ]
+let g:which_key_map['k'] = [ ':m-2<CR>=='                 , 'move lines Up' ]
 
 " Group mappings
 
 " a is for actions
 let g:which_key_map.a = {
       \ 'name' : '+actions' ,
-      \ 'c' : [':ColorizerToggle'        , 'colorizer'],
-      \ 'e' : [':CocCommand explorer'    , 'explorer'],
-      \ 'n' : [':set nonumber!'          , 'line-numbers'],
-      \ 'r' : [':set norelativenumber!'  , 'relative line nums'],
-      \ 's' : [':let @/ = ""'            , 'remove search highlight'],
-      \ 't' : [':FloatermToggle'         , 'terminal'],
-      \ 'v' : [':Vista!!'                , 'tag viewer'],
+      \ 'c' : [':ColorizerToggle'             , 'colorizer'],
+      \ 'e' : [':CocCommand explorer'         , 'explorer'],
+      \ 'n' : [':set nonumber!'               , 'line-numbers'],
+      \ 'r' : [':set norelativenumber!'       , 'relative line nums'],
+      \ 's' : [':let @/ = ""'                 , 'clear search highlight'],
+      \ 't' : [':FloatermToggle'              , 'terminal'],
+      \ 'l' : [':Limelight!!'                 , 'limelight toggle'],
+      \ '=' : [':setlocal spell!'             , 'spellcheck toggle'],
+      \ 'w' : [':call QuickFix_toggle()'      , 'quickfix window toogle'],
+      \ 'v' : [':Vista!!'                     , 'tag viewer'],
       \ }
 
 " b is for buffer
@@ -182,52 +188,22 @@ let g:which_key_map.t = {
       \ 's' : [':FloatermNew ncdu'                              , 'ncdu'],
       \ }
 
-" w is for wiki
+" w is for Word Processing Edit 
 let g:which_key_map.w = {
       \ 'name' : '+wiki' ,
-      \ 'w' : ['<Plug>VimwikiIndex'                              , 'ncdu'],
-      \ 'n' : ['<plug>(wiki-open)'                              , 'ncdu'],
-      \ 'j' : ['<plug>(wiki-journal)'                              , 'ncdu'],
-      \ 'R' : ['<plug>(wiki-reload)'                              , 'ncdu'],
-      \ 'c' : ['<plug>(wiki-code-run)'                              , 'ncdu'],
-      \ 'b' : ['<plug>(wiki-graph-find-backlinks)'                              , 'ncdu'],
-      \ 'g' : ['<plug>(wiki-graph-in)'                              , 'ncdu'],
-      \ 'G' : ['<plug>(wiki-graph-out)'                              , 'ncdu'],
-      \ 'l' : ['<plug>(wiki-link-toggle)'                              , 'ncdu'],
+      \ '=' : [':setlocal spell!'                               , 'spellcheck toggle'],
+      \ 'e' : [':set spell spelllang=en'                        , 'spellcheck english'],
+      \ 'r' : [':set spell spelllang=ru'                        , 'spellcheck russian'],
+      \ 'w' : [':set list!'                                     , 'show whitespace toggle'],
       \ 'd' : ['<plug>(wiki-page-delete)'                              , 'ncdu'],
-      \ 'r' : ['<plug>(wiki-page-rename)'                              , 'ncdu'],
       \ 't' : ['<plug>(wiki-page-toc)'                              , 'ncdu'],
       \ 'T' : ['<plug>(wiki-page-toc-local)'                              , 'ncdu'],
-      \ 'e' : ['<plug>(wiki-export)'                              , 'ncdu'],
       \ 'u' : ['<plug>(wiki-list-uniq)'                              , 'ncdu'],
-      \ 'U' : ['<plug>(wiki-list-uniq-local)'                              , 'ncdu'],
+      \ '0' : [':set conceallevel=0'                             , 'markdown concLevel 0'],
       \ }
 
 " Global
 " <Plug>VimwikiIndex
-" <Plug>VimwikiTabIndex
-" <Plug>VimwikiUISelect
-" <Plug>VimwikiDiaryIndex
-" <Plug>VimwikiMakeDiaryNote
-" <Plug>VimwikiTabMakeDiaryNote
-" <Plug>VimwikiMakeYesterdayDiaryNote
-" <Plug>VimwikiMakeTomorrowDiaryNote
-"
-" " Local
-" <Plug>Vimwiki2HTML
-" <Plug>Vimwiki2HTMLBrowse
-" <Plug>VimwikiDiaryGenerateLinks
-" <Plug>VimwikiFollowLink
-" <Plug>VimwikiSplitLink
-" <Plug>VimwikiVSplitLink
-" <Plug>VimwikiTabnewLink
-" <Plug>VimwikiGoBackLink
-" <Plug>VimwikiNextLink
-" <Plug>VimwikiPrevLink
-" <Plug>VimwikiGoto
-" <Plug>VimwikiDeleteLink
-" <Plug>VimwikiRenameLink
-" <Plug>VimwikiAddHeaderLevel
 
 " Register which key map
 call which_key#register('<Space>', "g:which_key_map")

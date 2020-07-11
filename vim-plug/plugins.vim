@@ -78,6 +78,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'liuchengxu/vista.vim'
     " See what keys do like in emacs
     Plug 'liuchengxu/vim-which-key'
+    " Dim paragraphs above and below the active paragraph.
+    Plug 'junegunn/limelight.vim'
     " Zen mode
     Plug 'junegunn/goyo.vim'
     " Making stuff
