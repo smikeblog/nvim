@@ -1,4 +1,6 @@
 
+autocmd User Startified setlocal buflisted
+
 " let g:floaterm_wintype='normal'
 " let g:floaterm_height=6
 
