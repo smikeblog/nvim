@@ -61,6 +61,19 @@ if get(g:, 'vim_better_default_enable_folding', 1)
   set foldlevelstart=99
 endif
 
+" make spellsuggest (z= keys) to work with fzf  {{{
+function! s:FzfSpellSink(word)
+  exe 'normal! "_ciw'.a:word
+endfunction
+
+function! FzfSpell()
+  let suggestions = spellsuggest(expand("<cword>"))
+  return fzf#run(fzf#wrap({'source': suggestions, 'sink': function("s:FzfSpellSink"), 'down':10}))
+endfunction
+
+" nnoremap z= :call FzfSpell()<CR>
+"" }}}
+
     " Disable python2 and define python3 path
 let g:python3_host_prog = '/usr/bin/python3'
 " let g:python_host_prog = '/usr/bin/python2'

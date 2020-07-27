@@ -61,6 +61,7 @@ let g:which_key_map.a = {
       \ 't' : [':FloatermToggle'              , 'terminal'],
       \ 'l' : [':Limelight!!'                 , 'limelight toggle'],
       \ '=' : [':setlocal spell!'             , 'spellcheck toggle'],
+      \ 'z' : [':call FzfSpell()'             , 'spellcheck FZF'],
       \ 'w' : [':call QuickFix_toggle()'      , 'quickfix window toogle'],
       \ 'v' : [':Vista!!'                     , 'tag viewer'],
       \ }
