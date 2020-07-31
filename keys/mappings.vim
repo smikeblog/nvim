@@ -1,4 +1,10 @@
 
+  " CtrlSF 
+  nmap     <C-F>f <Plug>CtrlSFPrompt
+  vmap     <C-F>f <Plug>CtrlSFVwordPath
+  nnoremap <silent> <C-F>o :CtrlSFOpen<CR>
+  nnoremap <silent> <C-F>j :CtrlSFFocus<CR> 
+
 imap <C-h> <C-w>h
 imap <C-j> <C-w>j
 imap <C-k> <C-w>k
