@@ -14,11 +14,11 @@ source $HOME/.config/nvim/keys/which-key.vim
 source $HOME/.config/nvim/general/paths.vim
 
 " Source depending on if VSCode is our client
-if exists('g:vscode')
+"if exists('g:vscode')
     " VSCode extension
   source $HOME/.config/nvim/vscode/windows.vim
   source $HOME/.config/nvim/plug-config/easymotion.vim
-else
+"else
   " ordinary neovim
   source $HOME/.config/nvim/themes/syntax.vim
   source $HOME/.config/nvim/themes/onedark.vim
@@ -44,7 +44,7 @@ else
   " source $HOME/.config/nvim/plug-config/vim-wiki.vim
   " source $HOME/.config/nvim/plug-config/easymotion.vim
   " source $HOME/.config/nvim/plug-config/codi.vim
-endif
+"endif
 
 " Experimental
 

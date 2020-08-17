@@ -15,7 +15,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Convert binary, hex, etc..
   Plug 'glts/vim-radical'
   " Files
-  Plug 'tpope/vim-eunuch'
+""  Plug 'tpope/vim-eunuch'
   " Repeat stuff
   Plug 'tpope/vim-repeat'
   " Surround
@@ -56,7 +56,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Intellisense
     " Golang
     Plug 'fatih/vim-go'
-    "Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Status Line
     Plug 'vim-airline/vim-airline'
@@ -99,6 +98,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'https://github.com/vimwiki/vimwiki.git'
     " Build the extra binary if cargo exists on your system.
     Plug 'honza/vim-snippets'
+    Plug 'j5shi/CommandlineComplete.vim'
     Plug 'wsdjeg/vim-fetch'
   endif
 

@@ -1,9 +1,9 @@
 
-  " CtrlSF 
-  nmap     <C-F>f <Plug>CtrlSFPrompt
-  vmap     <C-F>f <Plug>CtrlSFVwordPath
-  nnoremap <silent> <C-F>o :CtrlSFOpen<CR>
-  nnoremap <silent> <C-F>j :CtrlSFFocus<CR> 
+  " CtrlSF
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+nnoremap <silent> <C-F>o :CtrlSFOpen<CR>
+nnoremap <silent> <C-F>j :CtrlSFFocus<CR>
 
 imap <C-h> <C-w>h
 imap <C-j> <C-w>j
@@ -18,13 +18,13 @@ nnoremap <Space> <Nop>
 vnoremap < <gv
 vnoremap > >gv
 
-if exists('g:vscode')
+"if exists('g:vscode')
 
 " Simulate same TAB behavior in VSCode
 nmap <Tab> :Tabnext<CR>
 nmap <S-Tab> :Tabprev<CR>
 
-else
+"else
   " Better nav for omnicomplete
   inoremap <expr> <c-j> ("\<C-n>")
   inoremap <expr> <c-k> ("\<C-p>")
@@ -82,5 +82,5 @@ else
   nnoremap <silent> <M-k>    :resize +2<CR>
   nnoremap <silent> <M-h>    :vertical resize -2<CR>
   nnoremap <silent> <M-l>    :vertical resize +2<CR>
-endif
+"endif
 
