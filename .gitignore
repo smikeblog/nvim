@@ -1,6 +1,7 @@
 dein
 tags*
 .netrwhist
+.nvimlog
 pythonpath.vim
 nodepath.vim
 autoload/plugged/*
