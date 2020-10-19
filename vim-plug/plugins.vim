@@ -8,6 +8,8 @@ endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
 
+  Plug 'ncm2/float-preview.nvim'
+
   " fzf alternative
   Plug 'dyng/ctrlsf.vim'
   " Change dates fast
@@ -101,6 +103,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'honza/vim-snippets'
     Plug 'j5shi/CommandlineComplete.vim'
     Plug 'wsdjeg/vim-fetch'
+    Plug 'brooth/far.vim'
   endif
 
 

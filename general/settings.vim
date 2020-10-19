@@ -49,6 +49,10 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
   autocmd FileType markdown set conceallevel=0
 
+
+  " prevent clipboard register yank error
+let g:yankring_clipboard_monitor=0
+
 let vim_better_default_enable_folding=1
 if get(g:, 'vim_better_default_enable_folding', 1)
   set foldenable

@@ -17,7 +17,7 @@ source $HOME/.config/nvim/general/paths.vim
 "if exists('g:vscode')
     " VSCode extension
   source $HOME/.config/nvim/vscode/windows.vim
-  source $HOME/.config/nvim/plug-config/easymotion.vim
+"  source $HOME/.config/nvim/plug-config/easymotion.vim
 "else
   " ordinary neovim
   source $HOME/.config/nvim/themes/syntax.vim
@@ -26,6 +26,7 @@ source $HOME/.config/nvim/general/paths.vim
   source $HOME/.config/nvim/themes/airline.vim
   source $HOME/.config/nvim/plug-config/rnvimr.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
+  source $HOME/.config/nvim/plug-config/far.vim
   source $HOME/.config/nvim/plug-config/sctrlsf.vim
   source $HOME/.config/nvim/plug-config/nerd-commenter.vim
   source $HOME/.config/nvim/plug-config/rainbow.vim
