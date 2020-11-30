@@ -56,3 +56,7 @@ source $HOME/.config/nvim/general/paths.vim
 " disable python2 and set full path to python3
 let g:loaded_python_provider=0
 let g:python3_host_prog="/usr/bin/python3"
+
+""""""" Lua study  """""""
+" in init.vim
+command! Scratch lua require'tools'.makeScratch()

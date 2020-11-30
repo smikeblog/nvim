@@ -21,18 +21,20 @@
   // autoformat
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
+    "ch",
     "markdown",
     "javascript",
     "graphql",
     "html",
     "yaml",
     "json",
+    "julia",
     "python"
   ],
   "coc.preferences.hoverTarget": "float",
   // python config
-  "python.linting.enabled": true,
-  "python.linting.pylintEnabled": true,
+  "python.linting.enabled": false,
+  "python.linting.pylintEnabled": false,
   // snippets
   "snippets.ultisnips.directories": [
     "~/.vim/myultisnips",
@@ -43,40 +45,21 @@
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
   "explorer.icon.enableVimDevicons": false,
-  "explorer.keyMappings": {
-    "<cr>": [
-      "expandable?",
-      "expand",
-      "open"
-    ],
+  "explorer.keyMappings.global": {
+    "<cr>": ["expandable?", "expand", "open"],
     "v": "open:vsplit"
   },
   "languageserver": {
     "golang": {
       "command": "gopls",
-      "rootPatterns": [
-        "go.mod",
-        ".vim/",
-        ".git/",
-        ".hg/"
-      ],
-      "filetypes": [
-        "go"
-      ]
-    }
-  },
-  "languageserver": {
+      "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
+      "filetypes": ["go"]
+    },
     "bash": {
       "command": "bash-language-server",
-      "args": [
-        "start"
-      ],
-      "filetypes": [
-        "sh"
-      ],
-      "ignoredRootPaths": [
-        "~"
-      ]
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
     }
   }
   // TODO language servers
