@@ -7,7 +7,7 @@ set nowrap                              " Display long lines as just one line
 set encoding=utf-8                      " The encoding displayed
 set pumheight=10                        " Makes popup menu smaller
 set fileencoding=utf-8                  " The encoding written to file
-set ruler              			            " Show the cursor position all the time
+set ruler                               " Show the cursor position all the time
 set cmdheight=2                         " More space for displaying messages
 set mouse=a                             " Enable your mouse
 set splitbelow                          " Horizontal splits will automatically be below
@@ -31,7 +31,7 @@ set nowritebackup                       " This is recommended by coc
 set shortmess+=c                        " Don't pass messages to |ins-completion-menu|.
 set signcolumn=yes                      " Always show the signcolumn, otherwise it would shift the text each time
 set updatetime=300                      " Faster completion
-set timeoutlen=100                      " By default timeoutlen is 1000 ms
+set timeoutlen=200                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set incsearch
 set spelllang=en_us,ru_ru
@@ -41,13 +41,10 @@ set guifont=Fira\ Code\ Nerd\ Font
 " set autochdir                           " Your working directory will always be the same as your working directory
 " set foldcolumn=2                        " Folding abilities
 
-" au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+ " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
- " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
-  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
-
-  autocmd FileType markdown set conceallevel=0
+autocmd FileType markdown set conceallevel=0
 
 
   " prevent clipboard register yank error
@@ -70,9 +67,6 @@ augroup END
 
     " Disable python2 and define python3 path
 let g:python3_host_prog = '/usr/bin/python3'
-" let g:python_host_prog = '/usr/bin/python2'
-
-    " disable Python 2 support:
 let g:loaded_python2_provider = 0
 
 " You can't stop me

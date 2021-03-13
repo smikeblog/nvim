@@ -1,10 +1,4 @@
 
-  " CtrlSF
-nmap     <C-F>f <Plug>CtrlSFPrompt
-vmap     <C-F>f <Plug>CtrlSFVwordPath
-nnoremap <silent> <C-F>o :CtrlSFOpen<CR>
-nnoremap <silent> <C-F>j :CtrlSFFocus<CR>
-
 imap <C-h> <C-w>h
 imap <C-j> <C-w>j
 imap <C-k> <C-w>k
@@ -18,13 +12,6 @@ nnoremap <Space> <Nop>
 vnoremap < <gv
 vnoremap > >gv
 
-"if exists('g:vscode')
-
-" Simulate same TAB behavior in VSCode
-nmap <Tab> :Tabnext<CR>
-nmap <S-Tab> :Tabprev<CR>
-
-"else
   " Better nav for omnicomplete
   inoremap <expr> <c-j> ("\<C-n>")
   inoremap <expr> <c-k> ("\<C-p>")
@@ -32,10 +19,6 @@ nmap <S-Tab> :Tabprev<CR>
   " I hate escape more than anything else
   inoremap jk <Esc>
   inoremap kj <Esc>
-
-  " Easy CAPS
-  " inoremap <c-u> <ESC>viwUi
-  " nnoremap <c-u> viwU<Esc>
 
   " TAB in general mode will move to text buffer
   nnoremap <silent> <TAB> :bnext<CR>
@@ -59,13 +42,6 @@ nmap <S-Tab> :Tabprev<CR>
   " <TAB>: completion.
   inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
-
-  " Better window navigation
-  nnoremap <C-h> <C-w>h
-  nnoremap <C-j> <C-w>j
-  nnoremap <C-k> <C-w>k
-  nnoremap <C-l> <C-w>l
-
   " Terminal window navigation
   tnoremap <C-h> <C-\><C-N><C-w>h
   tnoremap <C-j> <C-\><C-N><C-w>j
@@ -84,3 +60,10 @@ nmap <S-Tab> :Tabprev<CR>
   nnoremap <silent> <M-l>    :vertical resize +2<CR>
 "endif
 
+" Toggle spell check.
+map <F5> :setlocal spell!<CR>
+
+" Navigating with guides <+++>
+	inoremap <localleader><localleader> <Esc>/i<Enter>"_c4l
+	vnoremap <localleader><localleader> <Esc>/<Enter>"_c4l
+	map <localleader><localleader> <Esc>/<++><Enter>"_c4l

@@ -34,17 +34,16 @@ let g:which_key_map[','] = [ 'Startify'                   , 'start screen' ]
 let g:which_key_map['d'] = [ ':bd'                        , 'delete buffer']
 let g:which_key_map['e'] = [ ':CocCommand explorer --preset floating'       , 'explorer' ]
 let g:which_key_map['F'] = [ ':Files'                     , 'search files' ]
-let g:which_key_map['h'] = [ '<C-W>s'                     , 'split below']
+let g:which_key_map['h'] = [ ':spl'                     , 'split below']
 let g:which_key_map['q'] = [ 'q'                          , 'quit' ]
 let g:which_key_map['R'] = [ ':RnvimrToggle'              , 'ranger' ]
 let g:which_key_map['L'] = [ ':FloatermNew lf'            , 'lf' ]
 let g:which_key_map['V'] = [ ':FloatermNew vifm'          , 'vifm' ]
 let g:which_key_map['S'] = [ ':SSave'                     , 'save session' ]
 let g:which_key_map['T'] = [ ':Rg'                        , 'search text' ]
-let g:which_key_map['v'] = [ '<C-W>v'                     , 'split right']
+let g:which_key_map['v'] = [ ':vspl'                     , 'split right']
 let g:which_key_map['W'] = [ 'w'                          , 'write' ]
 let g:which_key_map['z'] = [ 'Goyo'                       , 'zen' ]
-let g:which_key_map['C'] = [ 'Clap'                       , 'clap' ]
 let g:which_key_map['j'] = [ ':m+<CR>=='                  , 'move lines Down' ]
 let g:which_key_map['k'] = [ ':m-2<CR>=='                 , 'move lines Up' ]
 
@@ -212,6 +211,32 @@ let g:which_key_map.w = {
       \ 'T' : ['<plug>(wiki-page-toc-local)'                              , 'ncdu'],
       \ 'u' : ['<plug>(wiki-list-uniq)'                              , 'ncdu'],
       \ '0' : [':set conceallevel=0'                             , 'markdown concLevel 0'],
+      \ }
+
+" Templates
+let g:which_key_map.P = {
+      \ 'name' : '+templates' ,
+      \ 'p' : [':read ~/.config/nvim/templates/PhilPaper.tex'           , 'PhilPaper.tex'],
+      \ 'l' : [':read ~/.config/nvim/templates/Letter.tex'           , 'Letter.tex'],
+      \ 'g' : [':read ~/.config/nvim/templates/Glossary.tex'           , 'Glossary.tex'],
+      \ 'h' : [':read ~/.config/nvim/templates/HandOut.tex'           , 'HandOut.tex'],
+      \ 'b' : [':read ~/.config/nvim/templates/PhilBeamer.tex'           , 'PhilBeamer.tex'],
+      \ 's' : [':read ~/.config/nvim/templates/SubFile.tex'           , 'SubFile.tex'],
+      \ 'r' : [':read ~/.config/nvim/templates/Root.tex'           , 'Root.tex'],
+      \ 'm' : [':read ~/.config/nvim/templates/MultipleAnswer.tex'           , 'MultipleAnswer.tex'],
+      \ 'S' : [':read ~/.config/nvim/templates/template.sh'           , 'Script.sh'],
+      \ 'P' : [':read ~/.config/nvim/templates/template.pl'           , 'Script.pl'],
+      \ 'H' : [':read ~/.config/nvim/templates/index.html'           , 'INDEX.html'],
+      \ }
+
+" Pandoc
+let g:which_key_map.p = {
+      \ 'name' : '+pandoc' ,
+      \ 'w' : [':Pandoc docx'           , 'to word from open'],
+      \ 'm' : [':Pandoc md'             , 'to markdown from open'],
+      \ 'h' : [':Pandoc html'           , 'to html from open'],
+      \ 'l' : [':Pandoc latex'          , 'to latex from open'],
+      \ 'p' : [':Pandoc pdf'            , 'to pdf from open'],
       \ }
 
 " Global

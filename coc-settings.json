@@ -12,12 +12,20 @@
   "diagnostic.warningSign": "⚠",
   "diagnostic.infoSign": "",
   "diagnostic.hintSign": " ",
-  // "diagnostic.displayByAle": true,
-  // codelens TODO what does this get me?
-  // "codeLens.enable": true,
   // list
   "list.indicator": ">",
   "list.selectedSignText": " ",
+
+  // prettier stuff
+  "prettier.semi": false,
+  "prettier.eslintIntegration": true,
+  "prettier.tslintIntegration": true,
+  "prettier.trailingComma": "none",
+  "prettier.arrowParens": "avoid",
+  "prettier.bracketSpacing": true,
+  "prettier.jsxBracketSameLine": false,
+  "prettier.formatterPriority": -1,
+
   // autoformat
   "coc.preferences.formatOnSaveFiletypes": [
     "css",
@@ -33,6 +41,7 @@
   ],
   "coc.preferences.hoverTarget": "float",
   // python config
+  "python.pythonPath": "/usr/bin/python3",
   "python.linting.enabled": false,
   "python.linting.pylintEnabled": false,
   // snippets
@@ -54,12 +63,6 @@
       "command": "gopls",
       "rootPatterns": ["go.mod", ".vim/", ".git/", ".hg/"],
       "filetypes": ["go"]
-    },
-    "bash": {
-      "command": "bash-language-server",
-      "args": ["start"],
-      "filetypes": ["sh"],
-      "ignoredRootPaths": ["~"]
     }
   }
   // TODO language servers

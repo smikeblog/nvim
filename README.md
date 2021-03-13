@@ -8,58 +8,56 @@ The following will install this config if you have an existing config it will mo
 
 This script only supports Mac, Ubuntu and Arch
 
-```
+```bash
 bash <(curl -s https://raw.githubusercontent.com/ChristianChiarulli/nvim/master/utils/install.sh)
-smike:
-cd ~/
-~/.dotfiles/nvim/nvim-install.sh
+cd ~/.dotfiles/nvim/nvim-install.sh
 ```
 
 ## Install Neovim
 
 - On Mac
 
-  ```
+  ```sh
   brew install neovim
   ```
 
 - Ubuntu
 
-  ```
+  ```sh
   sudo apt install neovim
   ```
 
 - Arch
 
-  ```
+  ```sh
   sudo pacman -S neovim
   ```
 
 ## Clone this repo into your config
 
-```
+```sh
 git clone https://github.com/ChristianChiarulli/nvim.git ~/.config/nvim
 ```
 
 ## Install python & node support
 
-```
+```sh
 pip install pynvim
 ```
 
-```
+```sh
 npm i -g neovim
 ```
 
 ## Install Neovim remote
 
-```
+```sh
 pip install neovim-remote
 ```
 
 This will install `nvr` to `~/.local/bin` so you will need to add the following to your `bashrc` or `zshrc`
 
-```
+```sh
 export PATH=$HOME/.local/bin:$PATH
 ```
 
@@ -69,7 +67,7 @@ export PATH=$HOME/.local/bin:$PATH
 
 - On Ubuntu
 
-  ```
+  ```sh
   sudo apt install xsel
   ```
 
@@ -116,7 +114,7 @@ Example:
 
   `npm i -g bash-language-server`
 
-  ```
+  ```sh
   "languageserver": {
   "bash": {
     "command": "bash-language-server",

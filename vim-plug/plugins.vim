@@ -9,9 +9,21 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'ncm2/float-preview.nvim'
+  Plug 'hoob3rt/lualine.nvim'
+  Plug 'kyazdani42/nvim-web-devicons'
 
-  " fzf alternative
-  Plug 'dyng/ctrlsf.vim'
+  " Pandoc: conflict with markdown auto-indent and syntax highlighting
+    Plug 'vim-pandoc/vim-pandoc'
+    Plug 'vim-pandoc/vim-pandoc-syntax' " Syntax not as good
+
+"     LaTeX Support
+    Plug 'lervag/vimtex'
+    Plug 'dense-analysis/ale' " LaTeX Linting
+
+" Markdown
+    Plug 'gabrielelana/vim-markdown'
+"    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+"  Plug 'vijaymarupudi/nvim-fzf'
   " Change dates fast
   Plug 'tpope/vim-speeddating'
   " Convert binary, hex, etc..
@@ -21,7 +33,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Repeat stuff
   Plug 'tpope/vim-repeat'
   " Surround
-  Plug 'tpope/vim-surround'
+"  Plug 'tpope/vim-surround'
   " Better Comments
   Plug 'tpope/vim-commentary'
   " Plug 'preservim/nerdcommenter'
@@ -29,12 +41,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'airblade/vim-rooter'
   " auto set indent settings
   Plug 'tpope/vim-sleuth'
-
-  if exists('g:vscode')
-    " Easy motion for VSCode
-    Plug 'asvetliakov/vim-easymotion'
-
-  else
     " Text Navigation
     Plug 'justinmk/vim-sneak'
     Plug 'unblevable/quick-scope'
@@ -46,7 +52,7 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sheerun/vim-polyglot'
     " Cool Icons
     Plug 'ryanoasis/vim-devicons'
-    " Auto pairs for '(' '[' '{' 
+    " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     " Closetags
     Plug 'alvan/vim-closetag'
@@ -61,12 +67,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'fatih/vim-go'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     " Status Line
-    Plug 'vim-airline/vim-airline'
+    " Plug 'vim-airline/vim-airline'
     " Plug 'vim-airline/vim-airline-themes'
     " Ranger
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     " FZF
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'yuki-ycino/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
     Plug 'junegunn/fzf.vim'
     " Git
     " Plug 'mhinz/vim-signify'
@@ -89,7 +96,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Making stuff
     Plug 'neomake/neomake'
     " The bang version will try to download the prebuilt binary if cargo does not exist.
-    Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+    "Plug 'liuchengxu/vim-clap', { 'do': ':Clap install-binary!' }
+    " Add spelling errors to the quickfix list (vim-ingo-library is a dependency).
+    Plug 'inkarkat/vim-ingo-library' | Plug 'inkarkat/vim-SpellCheck'
     " Snippets TODO fix TAB hijack
     " Plug 'SirVer/ultisnips'
     " Better Comments
@@ -104,8 +113,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'j5shi/CommandlineComplete.vim'
     Plug 'wsdjeg/vim-fetch'
     Plug 'brooth/far.vim'
-  endif
-
 
 call plug#end()
 
