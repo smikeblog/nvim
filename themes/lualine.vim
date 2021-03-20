@@ -23,6 +23,6 @@ let g:lualine = {
     \},
     \'extensions' : [ 'fzf' ],
     \}
-lua require("lualine").status()
+lua require("lualine").setup()
 
 
