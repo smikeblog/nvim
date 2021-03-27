@@ -33,7 +33,7 @@ let g:which_key_map['='] = [ '<C-W>='                     , 'balance windows' ]
 let g:which_key_map[','] = [ 'Startify'                   , 'start screen' ]
 let g:which_key_map['d'] = [ ':bd'                        , 'delete buffer']
 let g:which_key_map['e'] = [ ':CocCommand explorer --preset floating'       , 'explorer' ]
-let g:which_key_map['F'] = [ ':Files'                     , 'search files' ]
+let g:which_key_map['i'] = [ ':Files'                     , 'search files' ]
 let g:which_key_map['h'] = [ ':spl'                     , 'split below']
 let g:which_key_map['q'] = [ 'q'                          , 'quit' ]
 let g:which_key_map['R'] = [ ':RnvimrToggle'              , 'ranger' ]
@@ -80,40 +80,40 @@ let g:which_key_map.b = {
       \ }
 
 " f is for find and replace
-let g:which_key_map.f = {
-      \ 'name' : '+find & replace' ,
-      \ 'b' : [':Farr --source=vimgrep'    , 'buffer'],
-      \ 'p' : [':Farr --source=rgnvim'     , 'project'],
-\ }
+" let g:which_key_map.F = {
+"       \ 'name' : '+find & replace' ,
+" \ }
 
 " s is for search
 let g:which_key_map.s = {
       \ 'name' : '+search' ,
-      \ '/' : [':History/'     , 'history'],
-      \ ';' : [':Commands'     , 'commands'],
-      \ 'a' : [':Ag'           , 'text Ag'],
-      \ 'b' : [':BLines'       , 'current buffer'],
-      \ 'B' : [':Buffers'      , 'open buffers'],
-      \ 'c' : [':Commits'      , 'commits'],
-      \ 'C' : [':BCommits'     , 'buffer commits'],
-      \ 'f' : [':CtrlSF'       , 'CtrlSF'],
-      \ 'F' : [':CtrlSFOpen'   , 'CtrlSFOpen'],
-      \ 'g' : [':GFiles'       , 'git files'],
-      \ 'G' : [':GFiles?'      , 'modified git files'],
-      \ 'h' : [':History'      , 'file history'],
-      \ 'H' : [':History:'     , 'command history'],
-      \ 'l' : [':Lines'        , 'lines'] ,
-      \ 'm' : [':Marks'        , 'marks'] ,
-      \ 'M' : [':Maps'         , 'normal maps'] ,
-      \ 'p' : [':Helptags'     , 'help tags'] ,
-      \ 'P' : [':Tags'         , 'project tags'],
-      \ 's' : [':Snippets'     , 'snippets'],
-      \ 'S' : [':Colors'       , 'color schemes'],
-      \ 't' : [':Rg'           , 'text Rg'],
-      \ 'T' : [':BTags'        , 'buffer tags'],
-      \ 'w' : [':Windows'      , 'search windows'],
-      \ 'y' : [':Filetypes'    , 'file types'],
-      \ 'z' : [':FZF'          , 'FZF'],
+      \ '/' : [':History/'                , 'history'],
+      \ ';' : [':Commands'                , 'commands'],
+      \ 'a' : [':Ag'                      , 'text Ag'],
+      \ 'b' : [':BLines'                  , 'current buffer'],
+      \ 'B' : [':Buffers'                 , 'open buffers'],
+      \ 'c' : [':Commits'                 , 'commits'],
+      \ 'C' : [':BCommits'                , 'buffer commits'],
+      \ 'f' : [':CtrlSF'                  , 'CtrlSF'],
+      \ 'F' : [':CtrlSFOpen'              , 'CtrlSFOpen'],
+      \ 'g' : [':GFiles'                  , 'git files'],
+      \ 'G' : [':GFiles?'                 , 'modified git files'],
+      \ 'h' : [':History'                 , 'file history'],
+      \ 'H' : [':History:'                , 'command history'],
+      \ 'l' : [':Lines'                   , 'lines'] ,
+      \ 'm' : [':Marks'                   , 'marks'] ,
+      \ 'M' : [':Maps'                    , 'normal maps'] ,
+      \ 'p' : [':Helptags'                , 'help tags'] ,
+      \ 'P' : [':Tags'                    , 'project tags'],
+      \ 's' : [':Snippets'                , 'snippets'],
+      \ 'S' : [':Colors'                  , 'color schemes'],
+      \ 't' : [':Rg'                      , 'text Rg'],
+      \ 'T' : [':BTags'                   , 'buffer tags'],
+      \ 'w' : [':Windows'                 , 'search windows'],
+      \ 'y' : [':Filetypes'               , 'file types'],
+      \ 'z' : [':FZF'                     , 'FZF'],
+      \ 'd' : [':Farr --source=vimgrep'   , 'buffer'],
+      \ 'D' : [':Farr --source=rgnvim'    , 'project'],
       \ }
 
 " g is for git

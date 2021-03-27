@@ -10,6 +10,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'ncm2/float-preview.nvim'
   Plug 'hoob3rt/lualine.nvim'
+" Cool Icons
+  Plug 'ryanoasis/vim-devicons'
   Plug 'kyazdani42/nvim-web-devicons'
 
   " Pandoc: conflict with markdown auto-indent and syntax highlighting
@@ -50,8 +52,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/rainbow_parentheses.vim'
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
-    " Cool Icons
-    Plug 'ryanoasis/vim-devicons'
     " Auto pairs for '(' '[' '{'
     Plug 'jiangmiao/auto-pairs'
     " Closetags

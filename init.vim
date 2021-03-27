@@ -16,15 +16,11 @@ source $HOME/.config/nvim/general/paths.vim
   source $HOME/.config/nvim/themes/syntax.vim
   source $HOME/.config/nvim/themes/nvcode.vim
   source $HOME/.config/nvim/themes/lualine.vim
-  "source $HOME/.config/nvim/themes/airline.vim
   source $HOME/.config/nvim/plug-config/rnvimr.vim
   source $HOME/.config/nvim/plug-config/fzf.vim
   source $HOME/.config/nvim/plug-config/far.vim
-"  source $HOME/.config/nvim/plug-config/sctrlsf.vim
-"  source $HOME/.config/nvim/plug-config/nerd-commenter.vim
   source $HOME/.config/nvim/plug-config/rainbow.vim
   source $HOME/.config/nvim/plug-config/quickscope.vim
-"  source $HOME/.config/nvim/plug-config/vim-clap.vim
   source $HOME/.config/nvim/plug-config/sneak.vim
   source $HOME/.config/nvim/plug-config/coc/coc.vim
   source $HOME/.config/nvim/plug-config/coc/coc-extensions.vim
@@ -40,6 +36,10 @@ source $HOME/.config/nvim/general/paths.vim
   source $HOME/.config/nvim/plug-config/pandoc.vim
   source $HOME/.config/nvim/plug-config/vimtex.vim
   luafile $HOME/.config/nvim/lua/plug-colorizer.lua
+  "source $HOME/.config/nvim/themes/airline.vim
+"  source $HOME/.config/nvim/plug-config/sctrlsf.vim
+"  source $HOME/.config/nvim/plug-config/nerd-commenter.vim
+"  source $HOME/.config/nvim/plug-config/vim-clap.vim
   "source $HOME/.config/nvim/plug-config/coc.vim
 "  source $HOME/.config/nvim/plug-config/nvim-fzfc.vim
 "  source $HOME/.config/nvim/themes/onedark.vim
@@ -57,4 +57,3 @@ let g:python3_host_prog="/usr/bin/python3"
 
 """"""" Lua study  """""""
 " in init.vim
-command! Scratch lua require'tools'.makeScratch()
